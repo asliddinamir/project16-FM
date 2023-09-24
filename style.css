@@ -8,4 +8,43 @@
 
 body {
     font-family: 'Karla', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 680px;
+    height: 450px;
+    display: grid;
+}
+
+.top_content {
+    background: #555;
+    border-radius: 10px 10px 0 0;
+}
+
+.bottom_content {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.right_content {
+    background: #777;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 0 10px 0;
+}
+
+.left_content {
+    background-color: #333;
+    grid-template-columns: 2fr;
+    border-radius: 0 0 0 10px;
 }
