@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
 
+:root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright_Yellow: hsl(71, 73%, 54%);
+    --Light_Gray: hsl(204, 43%, 93%);
+    --Grayish_Blue: hsl(218, 22%, 67%);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -14,6 +21,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     font-size: 16px;
+    background-color: #e5eff5;
 }
 
 .container {
