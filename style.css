@@ -104,6 +104,11 @@ body {
     -webkit-box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.137);
     box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.137);
     cursor: pointer;
+    transition: background .4s ease;
+}
+
+.btn:hover {
+    background: #91aa21;
 }
 
 
@@ -128,4 +133,15 @@ body {
     color: var(--Light_Gray);
     width: 80%;
     line-height: 1.4;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+footer a {
+    color: red;
 }
