@@ -10,7 +10,6 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
 }
 
 body {
@@ -22,12 +21,13 @@ body {
     min-height: 100vh;
     font-size: 16px;
     background-color: #e5eff5;
+    position: relative;
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 680px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 680px;
     height: 450px;
     display: grid;
 }
@@ -59,14 +59,14 @@ body {
 
 .bottom_content {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     height: 250px;
     color: #fff;
 }
 
 .left_content {
     background-color: var(--Cyan);
-    width: 340px;
+    max-width: 340px;
     border-radius: 0 0 0 10px;
     display: flex;
     flex-direction: column;
@@ -114,7 +114,7 @@ body {
 
 .right_content {
     padding: 32px;
-    width: 340px;
+    max-width: 340px;
     background: #2ec2c0;
     display: flex;
     flex-direction: column;
@@ -136,7 +136,7 @@ body {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 10px;
     text-align: center;
     font-size: 12px;
@@ -144,4 +144,61 @@ footer {
 
 footer a {
     color: red;
+}
+
+@media(max-width:721px) {
+    .right_content {
+        padding: 20px;
+    }
+
+    .left_content {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 491px) {
+    body {
+        padding-block: 30px;
+        height: 130vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+    }
+
+    .top_content {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .bottom_content {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .left_content {
+        border-radius: 0;
+    }
+
+    .right_content {
+        border-radius: 0 0 10px 10px;
+    }
+
+    .left_content,
+    .right_content {
+        max-width: 100%;
+    }
+
+    footer {
+        margin-top: 3rem;
+    }
 }
